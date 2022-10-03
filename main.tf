@@ -132,3 +132,8 @@ resource "aws_security_group" "sgec2" {
     Name = "securitygrpec2"
   }
 }
+
+
+#####The instances in the public subnet can send outbound traffic directly to the internet, whereas the instances in the private subnet can't. 
+Instead, the instances in the private subnet can access the internet by using a network address translation (NAT) gateway that resides in the public subnet.
+    The database servers can connect to the internet for software updates using the NAT gateway, but the internet cannot establish connections to the database servers.
